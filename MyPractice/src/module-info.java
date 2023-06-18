@@ -1,0 +1,9 @@
+/**
+ * 
+ */
+/**
+ * @author tGame
+ *
+ */
+module MyPractice {
+}
