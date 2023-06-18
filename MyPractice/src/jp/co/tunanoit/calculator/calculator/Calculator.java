@@ -1,5 +1,7 @@
 package jp.co.tunanoit.calculator.calculator;
 
+import java.util.ArrayList;
+
 import jp.co.tunanoit.my_io_utils.InputValidator;
 import jp.co.tunanoit.my_io_utils.MyInputter;
 
@@ -17,12 +19,16 @@ public class Calculator {
 	 * @return 計算結果
 	 */
 	public double calc() {
+		ArrayList<Double> elements = new ArrayList<>();
+		ArrayList<String> operators = new ArrayList<>();
 		double result = 0;
-		double element1 = MyInputter.inputDouble();
-		String operator = InputValidator.checkOperator(MyInputter.inputString());
-		double element2 = MyInputter.inputDouble();
+		String operator = "";
 
-		result = calc2(element1, element2, operator);
+		while (!operator.equals("=")) {
+			elements.add(MyInputter.inputDouble());
+			operator = InputValidator.checkOperator(MyInputter.inputString());
+			operators.add(operator);
+		}
 		return result;
 	}
 
