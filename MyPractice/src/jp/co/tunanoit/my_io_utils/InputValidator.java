@@ -15,8 +15,9 @@ public class InputValidator {
 	private static String MINUS = "-";
 	private static String MULTIPLIED_BY = "*";
 	private static String DIVIDED_BY = "/";
+	private static String EQUAL = "=";
 
-	private static List<String> ARITHMETIC_SYMBOLS = Arrays.asList(PLUS, MINUS, MULTIPLIED_BY, DIVIDED_BY);
+	private static List<String> ARITHMETIC_SYMBOLS = Arrays.asList(PLUS, MINUS, MULTIPLIED_BY, DIVIDED_BY, EQUAL);
 
 	/**
 	 * 四則演算記号の判定を行います。
